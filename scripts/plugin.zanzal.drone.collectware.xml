@@ -1,0 +1,464 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>plugin.zanzal.drone.collectware</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="target.ware" type="Var/Flying Ware" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="">
+			<comment>* ************************************************</comment>
+		</line>
+		<line linenr="002" indent="">
+			<comment>* SCRIPT NAME: plugin.zanzal.drone.collectware</comment>
+		</line>
+		<line linenr="003" indent="">
+			<comment>* DESCRIPTION: Instructs a mining drone to collect a ware and return.</comment>
+		</line>
+		<line linenr="004" indent="">
+			<comment>* </comment>
+		</line>
+		<line linenr="005" indent="">
+			<comment>* AUTHOR: Zanzal          DATE: 25 December 2013</comment>
+		</line>
+		<line linenr="006" indent="">
+			<comment>* ************************************************</comment>
+		</line>
+		<line linenr="007" indent="">
+			<var>$pageid</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>8101</var>
+		</line>
+		<line linenr="008" indent="" />
+		<line linenr="009" indent="">
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>command</text>
+			<text>:</text>
+			<text> </text>
+			<var>[COMMAND_COLLECT_WARE]</var>
+			<text> </text>
+			<text>target</text>
+			<text>=</text>
+			<var>$target.ware</var>
+			<text> </text>
+			<text>target2</text>
+			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>par1</text>
+			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>par2</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="010" indent="" />
+		<line linenr="011" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>!move.collectware</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>wareobj</text>
+			<text>=</text>
+			<var>$target.ware</var>
+			<text> </text>
+			<text>destroy</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="012" indent="" />
+		<line linenr="013" indent="">
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>command</text>
+			<text>:</text>
+			<text> </text>
+			<var>[COMMAND_RETURN_HOME]</var>
+		</line>
+		<line linenr="014" indent="" />
+		<line linenr="015" indent="">
+			<var>$homebase</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>homebase</text>
+		</line>
+		<line linenr="016" indent="">
+			<text>gosub</text>
+			<text> </text>
+			<var>wait_homebase</var>
+			<text>:</text>
+		</line>
+		<line linenr="017" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>!move.returntohomebase</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="018" indent="" />
+		<line linenr="019" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="020" indent="" />
+		<line linenr="021" indent="">
+			<var>wait_homebase</var>
+			<text>:</text>
+		</line>
+		<line linenr="022" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="023" indent="&#160;&#160;">
+			<var>$homebase.pos</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$homebase</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>position</text>
+			<text> </text>
+			<text>as</text>
+			<text> </text>
+			<text>array</text>
+		</line>
+		<line linenr="024" indent="&#160;&#160;">
+			<var>$homebase.sector</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$homebase</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>sector</text>
+		</line>
+		<line linenr="025" indent="&#160;&#160;" />
+		<line linenr="026" indent="&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>[SECTOR]</var>
+			<text> </text>
+			<text>!=</text>
+			<text> </text>
+			<var>$homebase.sector</var>
+		</line>
+		<line linenr="027" indent="&#160;&#160;&#160;">
+			<comment>* Homebase has left the sector - No point chasing wait for return until we die.</comment>
+		</line>
+		<line linenr="028" indent="&#160;&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<text>randomly</text>
+			<text> </text>
+			<text>from</text>
+			<text> </text>
+			<var>200</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>400</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="029" indent="&#160;&#160;">
+			<text>else</text>
+		</line>
+		<line linenr="030" indent="&#160;&#160;&#160;">
+			<text>break</text>
+		</line>
+		<line linenr="031" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="032" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="033" indent="">
+			<text>endsub</text>
+		</line>
+		<line linenr="034" indent="" />
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="plugin.zanzal.drone.collectware" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="5">
+				<sval type="string" val="target.ware" />
+				<sval type="string" val="pageid" />
+				<sval type="string" val="homebase" />
+				<sval type="string" val="homebase.pos" />
+				<sval type="string" val="homebase.sector" />
+			</sval>
+			<sval type="array" size="18">
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="8101" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="538" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="18" />
+					<sval type="int" val="24" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="!move.collectware" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="524" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="18" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="704" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="!move.returntohomebase" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="101" />
+					<sval type="string" val="wait_homebase" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608375" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="795" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="703" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608893" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="107" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="200" />
+					<sval type="int" val="4" />
+					<sval type="int" val="400" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="1">
+					<sval type="int" val="1168" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="55" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="19">
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="************************************************" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="SCRIPT NAME: plugin.zanzal.drone.collectware" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="DESCRIPTION: Instructs a mining drone to collect a ware and return." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="AUTHOR: Zanzal          DATE: 25 December 2013" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="************************************************" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="2" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="7" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="13" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Homebase has left the sector - No point chasing wait for return until we die." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="15" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="16" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="16" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="17" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>
