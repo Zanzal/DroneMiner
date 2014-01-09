@@ -24,5 +24,8 @@
 	<document type="script">C:\Program Files (x86)\Steam\steamapps\common\x3 terran conflict\addon\scripts\plugin.zanzal.droneminer.restock.xml</document>
 	<document type="script">C:\Users\Steven\Downloads\Prospektor_X3TC_V3303\scripts\plugin.zanzal.drone.followhomebase.xml</document>
 	<document type="script">C:\Program Files (x86)\Steam\steamapps\common\x3 terran conflict\addon\scripts\plugin.zanzal.droneminer.bustroid.xml</document>
+	<document type="script">C:\Program Files (x86)\Steam\steamapps\common\x3 terran conflict\addon\scripts\plugin.zanzal.sendmessagefrom.xml</document>
+	<document type="script">C:\Program Files (x86)\Steam\steamapps\common\x3 terran conflict\addon\scripts\plugin.zanzal.threatassessment.xml</document>
+	<document type="script">C:\Program Files (x86)\Steam\steamapps\common\x3 terran conflict\addon\scripts\plugin.zanzal.jumptosectornear.xml</document>
 	<document type="language">C:\Program Files (x86)\Steam\steamapps\common\x3 terran conflict\addon\t\8101-L044.xml</document>
 </project>

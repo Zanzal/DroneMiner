@@ -260,13 +260,16 @@
 			<var>[FLRET_FIREFREE]</var>
 		</line>
 		<line linenr="039" indent="&#160;&#160;&#160;">
+			<comment>* Fire on $rocks</comment>
+		</line>
+		<line linenr="040" indent="&#160;&#160;&#160;">
 			<var>$x</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="040" indent="&#160;&#160;&#160;">
+		<line linenr="041" indent="&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$x</var>
@@ -275,7 +278,7 @@
 			<text> </text>
 			<var>10</var>
 		</line>
-		<line linenr="041" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="042" indent="&#160;&#160;&#160;&#160;">
 			<text>=</text>
 			<text> </text>
 			<var>[THIS]</var>
@@ -297,7 +300,7 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="042" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="043" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -314,40 +317,40 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="043" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="044" indent="&#160;&#160;&#160;&#160;">
 			<text>inc</text>
 			<text> </text>
 			<var>$x</var>
 		</line>
-		<line linenr="044" indent="&#160;&#160;&#160;">
+		<line linenr="045" indent="&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="045" indent="&#160;&#160;">
+		<line linenr="046" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="046" indent="&#160;">
+		<line linenr="047" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="047" indent="">
+		<line linenr="048" indent="">
 			<text>endsub</text>
 		</line>
-		<line linenr="048" indent="" />
-		<line linenr="049" indent="">
+		<line linenr="049" indent="" />
+		<line linenr="050" indent="">
 			<var>drone_dock</var>
 			<text>:</text>
 		</line>
-		<line linenr="050" indent="&#160;">
+		<line linenr="051" indent="&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="051" indent="&#160;&#160;">
+		<line linenr="052" indent="&#160;&#160;">
 			<text>gosub</text>
 			<text> </text>
 			<var>wait_homebase</var>
 			<text>:</text>
 		</line>
-		<line linenr="052" indent="&#160;&#160;">
+		<line linenr="053" indent="&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -374,7 +377,7 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="053" indent="&#160;&#160;" interruptable="@">
+		<line linenr="054" indent="&#160;&#160;" interruptable="@">
 			<var>$result</var>
 			<text> </text>
 			<text>=</text>
@@ -404,7 +407,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="054" indent="&#160;&#160;">
+		<line linenr="055" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$result</var>
@@ -413,13 +416,13 @@
 			<text> </text>
 			<var>[FLRET_TARGETREACHED]</var>
 		</line>
-		<line linenr="055" indent="&#160;&#160;&#160;">
+		<line linenr="056" indent="&#160;&#160;&#160;">
 			<text>gosub</text>
 			<text> </text>
 			<var>dock_success</var>
 			<text>:</text>
 		</line>
-		<line linenr="056" indent="&#160;&#160;">
+		<line linenr="057" indent="&#160;&#160;">
 			<text>else</text>
 			<text> </text>
 			<text>if</text>
@@ -438,13 +441,13 @@
 			<text> </text>
 			<var>[FLRET_INTERRUPTED]</var>
 		</line>
-		<line linenr="057" indent="&#160;&#160;&#160;">
+		<line linenr="058" indent="&#160;&#160;&#160;">
 			<text>break</text>
 		</line>
-		<line linenr="058" indent="&#160;&#160;">
+		<line linenr="059" indent="&#160;&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="059" indent="&#160;&#160;&#160;">
+		<line linenr="060" indent="&#160;&#160;&#160;">
 			<var>$curspd</var>
 			<text> </text>
 			<text>=</text>
@@ -458,7 +461,7 @@
 			<text> </text>
 			<text>speed</text>
 		</line>
-		<line linenr="060" indent="&#160;&#160;&#160;">
+		<line linenr="061" indent="&#160;&#160;&#160;">
 			<var>$maxspd</var>
 			<text> </text>
 			<text>=</text>
@@ -472,7 +475,7 @@
 			<text> </text>
 			<text>speed</text>
 		</line>
-		<line linenr="061" indent="&#160;&#160;&#160;">
+		<line linenr="062" indent="&#160;&#160;&#160;">
 			<var>$dist</var>
 			<text> </text>
 			<text>=</text>
@@ -489,7 +492,7 @@
 			<text> </text>
 			<var>$homebase</var>
 		</line>
-		<line linenr="062" indent="&#160;&#160;&#160;">
+		<line linenr="063" indent="&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$curspd</var>
@@ -512,35 +515,35 @@
 			<text> </text>
 			<var>1500</var>
 		</line>
-		<line linenr="063" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="064" indent="&#160;&#160;&#160;&#160;">
 			<text>gosub</text>
 			<text> </text>
 			<var>dock_success</var>
 			<text>:</text>
 		</line>
-		<line linenr="064" indent="&#160;&#160;&#160;">
+		<line linenr="065" indent="&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="065" indent="&#160;&#160;">
+		<line linenr="066" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="066" indent="&#160;">
+		<line linenr="067" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="067" indent="">
+		<line linenr="068" indent="">
 			<text>endsub</text>
 		</line>
-		<line linenr="068" indent="" />
-		<line linenr="069" indent="">
+		<line linenr="069" indent="" />
+		<line linenr="070" indent="">
 			<var>wait_homebase</var>
 			<text>:</text>
 		</line>
-		<line linenr="070" indent="&#160;">
+		<line linenr="071" indent="&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="071" indent="&#160;&#160;">
+		<line linenr="072" indent="&#160;&#160;">
 			<text>skip</text>
 			<text> </text>
 			<text>if</text>
@@ -550,13 +553,13 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="072" indent="&#160;&#160;&#160;">
+		<line linenr="073" indent="&#160;&#160;&#160;">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="073" indent="&#160;&#160;" />
-		<line linenr="074" indent="&#160;&#160;">
+		<line linenr="074" indent="&#160;&#160;" />
+		<line linenr="075" indent="&#160;&#160;">
 			<var>$homebase.sector</var>
 			<text> </text>
 			<text>=</text>
@@ -568,8 +571,8 @@
 			<text> </text>
 			<text>sector</text>
 		</line>
-		<line linenr="075" indent="&#160;&#160;" />
-		<line linenr="076" indent="&#160;&#160;">
+		<line linenr="076" indent="&#160;&#160;" />
+		<line linenr="077" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>[SECTOR]</var>
@@ -578,7 +581,7 @@
 			<text> </text>
 			<var>$homebase.sector</var>
 		</line>
-		<line linenr="077" indent="&#160;&#160;&#160;">
+		<line linenr="078" indent="&#160;&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -605,10 +608,10 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="078" indent="&#160;&#160;&#160;">
+		<line linenr="079" indent="&#160;&#160;&#160;">
 			<comment>* Homebase has left the sector - No point chasing wait for return until we die.</comment>
 		</line>
-		<line linenr="079" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="080" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -625,27 +628,27 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="080" indent="&#160;&#160;">
+		<line linenr="081" indent="&#160;&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="081" indent="&#160;&#160;&#160;">
+		<line linenr="082" indent="&#160;&#160;&#160;">
 			<text>break</text>
 		</line>
-		<line linenr="082" indent="&#160;&#160;">
+		<line linenr="083" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="083" indent="&#160;">
+		<line linenr="084" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="084" indent="">
+		<line linenr="085" indent="">
 			<text>endsub</text>
 		</line>
-		<line linenr="085" indent="" />
-		<line linenr="086" indent="">
+		<line linenr="086" indent="" />
+		<line linenr="087" indent="">
 			<var>dock_success</var>
 			<text>:</text>
 		</line>
-		<line linenr="087" indent="&#160;">
+		<line linenr="088" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>[THIS]</var>
@@ -659,14 +662,14 @@
 			<text> </text>
 			<var>[Fighter Drone MKII]</var>
 		</line>
-		<line linenr="088" indent="&#160;&#160;">
+		<line linenr="089" indent="&#160;&#160;">
 			<var>$ware</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>{Fighter Drone MKII}</var>
 		</line>
-		<line linenr="089" indent="&#160;">
+		<line linenr="090" indent="&#160;">
 			<text>else</text>
 			<text> </text>
 			<text>if</text>
@@ -682,27 +685,27 @@
 			<text> </text>
 			<var>[Keris]</var>
 		</line>
-		<line linenr="090" indent="&#160;&#160;">
+		<line linenr="091" indent="&#160;&#160;">
 			<var>$ware</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>{Keris}</var>
 		</line>
-		<line linenr="091" indent="&#160;">
+		<line linenr="092" indent="&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="092" indent="&#160;&#160;">
+		<line linenr="093" indent="&#160;&#160;">
 			<var>$ware</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>{Fighter Drone}</var>
 		</line>
-		<line linenr="093" indent="&#160;">
+		<line linenr="094" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="094" indent="&#160;">
+		<line linenr="095" indent="&#160;">
 			<text>=</text>
 			<text> </text>
 			<var>$homebase</var>
@@ -718,7 +721,7 @@
 			<text> </text>
 			<var>$ware</var>
 		</line>
-		<line linenr="095" indent="&#160;">
+		<line linenr="096" indent="&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -733,15 +736,15 @@
 			<text>=</text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="096" indent="&#160;">
+		<line linenr="097" indent="&#160;">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="097" indent="">
+		<line linenr="098" indent="">
 			<text>endsub</text>
 		</line>
-		<line linenr="098" indent="" />
+		<line linenr="099" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
@@ -1318,7 +1321,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="41">
+			<sval type="array" size="42">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -1405,6 +1408,11 @@
 				<sval type="array" size="2">
 					<sval type="int" val="20" />
 					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="22" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Fire on $rocks" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="28" />
