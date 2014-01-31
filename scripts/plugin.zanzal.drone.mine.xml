@@ -86,14 +86,14 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>25</var>
+			<var>44</var>
 		</line>
 		<line linenr="014" indent="">
 			<var>$config.cargo.keepfree</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>200</var>
+			<var>100</var>
 		</line>
 		<line linenr="015" indent="" />
 		<line linenr="016" indent="">
@@ -169,11 +169,11 @@
 			<text> </text>
 			<text>from</text>
 			<text> </text>
-			<var>500</var>
+			<var>125</var>
 			<text> </text>
 			<text>to</text>
 			<text> </text>
-			<var>1000</var>
+			<var>250</var>
 			<text> </text>
 			<text>ms</text>
 		</line>
@@ -869,11 +869,11 @@
 			<text> </text>
 			<text>from</text>
 			<text> </text>
-			<var>100</var>
+			<var>50</var>
 			<text> </text>
 			<text>to</text>
 			<text> </text>
-			<var>200</var>
+			<var>100</var>
 			<text> </text>
 			<text>ms</text>
 		</line>
@@ -981,36 +981,6 @@
 			<text>'zanzal.droneminer'</text>
 		</line>
 		<line linenr="140" indent="&#160;">
-			<text>if</text>
-			<text> </text>
-			<var>$vars</var>
-			<text> </text>
-			<text>==</text>
-			<text> </text>
-			<var>null</var>
-		</line>
-		<line linenr="141" indent="&#160;&#160;">
-			<text>display</text>
-			<text> </text>
-			<text>subtitle</text>
-			<text> </text>
-			<text>text</text>
-			<text>:</text>
-			<text> </text>
-			<text>text</text>
-			<text>=</text>
-			<text>'Error: drone miner variable not found.'</text>
-			<text> </text>
-			<text>duration</text>
-			<text>=</text>
-			<var>6000</var>
-			<text> </text>
-			<text>ms</text>
-		</line>
-		<line linenr="142" indent="&#160;">
-			<text>end</text>
-		</line>
-		<line linenr="143" indent="&#160;">
 			<var>$rocks</var>
 			<text> </text>
 			<text>=</text>
@@ -1020,7 +990,7 @@
 			<var>$IDX_ROCKS</var>
 			<text>]</text>
 		</line>
-		<line linenr="144" indent="&#160;">
+		<line linenr="141" indent="&#160;">
 			<text>while</text>
 			<text> </text>
 			<text>size</text>
@@ -1031,7 +1001,7 @@
 			<text> </text>
 			<var>$rocks</var>
 		</line>
-		<line linenr="145" indent="&#160;&#160;">
+		<line linenr="142" indent="&#160;&#160;">
 			<var>$rock</var>
 			<text> </text>
 			<text>=</text>
@@ -1041,7 +1011,7 @@
 			<var>0</var>
 			<text>]</text>
 		</line>
-		<line linenr="146" indent="&#160;&#160;">
+		<line linenr="143" indent="&#160;&#160;">
 			<text>remove</text>
 			<text> </text>
 			<text>element</text>
@@ -1058,7 +1028,7 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="147" indent="&#160;&#160;">
+		<line linenr="144" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$rock</var>
@@ -1066,7 +1036,7 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="148" indent="&#160;&#160;&#160;">
+		<line linenr="145" indent="&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$rock</var>
@@ -1078,26 +1048,26 @@
 			<text> </text>
 			<text>rocks</text>
 		</line>
-		<line linenr="149" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="146" indent="&#160;&#160;&#160;&#160;">
 			<text>break</text>
 		</line>
-		<line linenr="150" indent="&#160;&#160;&#160;">
+		<line linenr="147" indent="&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="151" indent="&#160;&#160;">
+		<line linenr="148" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="152" indent="&#160;&#160;">
+		<line linenr="149" indent="&#160;&#160;">
 			<var>$rock</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="153" indent="&#160;">
+		<line linenr="150" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="154" indent="">
+		<line linenr="151" indent="">
 			<text>endsub</text>
 		</line>
 	</sourcetext>
@@ -1135,7 +1105,7 @@
 				<sval type="string" val="vars" />
 				<sval type="string" val="rocks" />
 			</sval>
-			<sval type="array" size="104">
+			<sval type="array" size="102">
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
 					<sval type="int" val="0" />
@@ -1180,7 +1150,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="25" />
+					<sval type="int" val="44" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -1189,7 +1159,7 @@
 					<sval type="int" val="4" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="200" />
+					<sval type="int" val="100" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -1263,9 +1233,9 @@
 					<sval type="int" val="107" />
 					<sval type="int" val="-2147483647" />
 					<sval type="int" val="4" />
-					<sval type="int" val="500" />
+					<sval type="int" val="125" />
 					<sval type="int" val="4" />
-					<sval type="int" val="1000" />
+					<sval type="int" val="250" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="1182" />
@@ -1763,9 +1733,9 @@
 					<sval type="int" val="107" />
 					<sval type="int" val="-2147483647" />
 					<sval type="int" val="4" />
-					<sval type="int" val="100" />
+					<sval type="int" val="50" />
 					<sval type="int" val="4" />
-					<sval type="int" val="200" />
+					<sval type="int" val="100" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -1866,28 +1836,6 @@
 					<sval type="string" val="zanzal.droneminer" />
 					<sval type="int" val="23" />
 				</sval>
-				<sval type="array" size="13">
-					<sval type="int" val="104" />
-					<sval type="int" val="-1610588669" />
-					<sval type="int" val="3" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="23" />
-					<sval type="int" val="0" />
-					<sval type="int" val="0" />
-					<sval type="int" val="15" />
-					<sval type="int" val="0" />
-					<sval type="int" val="3" />
-					<sval type="int" val="-1" />
-					<sval type="int" val="0" />
-					<sval type="int" val="-2" />
-				</sval>
-				<sval type="array" size="5">
-					<sval type="int" val="1418" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Error: drone miner variable not found." />
-					<sval type="int" val="4" />
-					<sval type="int" val="6000" />
-				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="129" />
 					<sval type="int" val="24" />
@@ -1898,7 +1846,7 @@
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="131" />
-					<sval type="int" val="-1610586359" />
+					<sval type="int" val="-1610586871" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="24" />
 				</sval>
@@ -1921,17 +1869,17 @@
 					<sval type="int" val="706" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
-					<sval type="int" val="-1610586877" />
+					<sval type="int" val="-1610587389" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="1214" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
-					<sval type="int" val="-1610586877" />
+					<sval type="int" val="-1610587389" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="103" />
+					<sval type="int" val="101" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
@@ -1944,14 +1892,14 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="95" />
+					<sval type="int" val="93" />
 				</sval>
 				<sval type="array" size="1">
 					<sval type="int" val="1168" />
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="74">
+			<sval type="array" size="73">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -2237,23 +2185,19 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="94" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="101" />
+					<sval type="int" val="99" />
 					<sval type="int" val="7" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="101" />
+					<sval type="int" val="99" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="99" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="101" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="103" />
 					<sval type="int" val="4" />
 				</sval>
 			</sval>

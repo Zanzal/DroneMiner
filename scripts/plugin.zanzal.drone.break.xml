@@ -158,7 +158,7 @@
 			<text> </text>
 			<text>&lt;</text>
 			<text> </text>
-			<var>4</var>
+			<var>10</var>
 		</line>
 		<line linenr="028" indent="&#160;&#160;">
 			<text>if</text>
@@ -872,7 +872,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="4" />
 					<sval type="int" val="4" />
-					<sval type="int" val="4" />
+					<sval type="int" val="10" />
 					<sval type="int" val="15" />
 					<sval type="int" val="3" />
 					<sval type="int" val="3" />
