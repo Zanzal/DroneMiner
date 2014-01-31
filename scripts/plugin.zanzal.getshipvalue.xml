@@ -11,7 +11,7 @@
 	</arguments>
 	<sourcetext>
 		<line linenr="001" indent="">
-			<comment>*************************************************</comment>
+			<comment>* ************************************************</comment>
 		</line>
 		<line linenr="002" indent="">
 			<comment>* SCRIPT NAME: plugin.zanzal.getshipvalue</comment>
@@ -26,7 +26,7 @@
 			<comment>* AUTHOR: Zanzal          DATE: 3 January 2014</comment>
 		</line>
 		<line linenr="006" indent="">
-			<comment>*************************************************</comment>
+			<comment>* ************************************************</comment>
 		</line>
 		<line linenr="007" indent="">
 			<var>$ware</var>
@@ -34,7 +34,6 @@
 			<text>=</text>
 			<text> </text>
 			<var>$ship</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>get</text>
@@ -56,7 +55,7 @@
 			<text> </text>
 			<text>get</text>
 			<text> </text>
-			<text>average</text>
+			<text>max</text>
 			<text> </text>
 			<text>price</text>
 			<text> </text>
@@ -248,7 +247,6 @@
 			<text>&lt;</text>
 			<text> </text>
 			<var>$subtypes</var>
-			<text> </text>
 		</line>
 		<line linenr="026" indent="&#160;&#160;&#160;&#160;">
 			<var>$ware.item</var>
@@ -277,7 +275,6 @@
 			<text>=</text>
 			<text> </text>
 			<var>$ship</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>get</text>
@@ -316,9 +313,7 @@
 			<text>:</text>
 			<text> </text>
 			<text>ware</text>
-			<text> </text>
 			<text>=</text>
-			<text> </text>
 			<var>$ware.item</var>
 		</line>
 		<line linenr="030" indent="&#160;&#160;">
@@ -327,7 +322,6 @@
 			<text>=</text>
 			<text> </text>
 			<var>$ship</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>get</text>
@@ -347,7 +341,6 @@
 			<text> </text>
 			<text>units</text>
 			<text>:</text>
-			<text> </text>
 			<var>$units</var>
 		</line>
 		<line linenr="031" indent="&#160;">
@@ -363,7 +356,6 @@
 		</line>
 		<line linenr="032" indent="">
 			<text>else</text>
-			<text> </text>
 		</line>
 		<line linenr="033" indent="">
 			<var>$price</var>
@@ -392,13 +384,11 @@
 			<text>+</text>
 			<text> </text>
 			<text>(</text>
-			<text> </text>
 			<var>$units</var>
 			<text> </text>
 			<text>*</text>
 			<text> </text>
 			<var>$price</var>
-			<text> </text>
 			<text>)</text>
 		</line>
 		<line linenr="035" indent="">
@@ -458,7 +448,7 @@
 					<sval type="int" val="1" />
 				</sval>
 				<sval type="array" size="4">
-					<sval type="int" val="629" />
+					<sval type="int" val="630" />
 					<sval type="int" val="2" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />

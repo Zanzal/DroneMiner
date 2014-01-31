@@ -245,8 +245,23 @@
 			<text> </text>
 			<var>$station.item</var>
 		</line>
-		<line linenr="025" indent="&#160;" />
-		<line linenr="026" indent="&#160;">
+		<line linenr="025" indent="&#160;">
+			<var>$station.item.race</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$station.item</var>
+			<text> </text>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>owner</text>
+			<text> </text>
+			<text>race</text>
+		</line>
+		<line linenr="026" indent="&#160;" />
+		<line linenr="027" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>[THIS]</var>
@@ -266,7 +281,71 @@
 			<text> </text>
 			<var>$station.item</var>
 		</line>
-		<line linenr="027" indent="&#160;&#160;">
+		<line linenr="028" indent="&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text> </text>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>can</text>
+			<text> </text>
+			<text>buy</text>
+			<text> </text>
+			<text>ware</text>
+			<text> </text>
+			<var>$ware</var>
+			<text> </text>
+			<text>from</text>
+			<text> </text>
+			<text>race</text>
+			<text> </text>
+			<var>$station.item.race</var>
+		</line>
+		<line linenr="029" indent="&#160;&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<text>not</text>
+			<text> </text>
+			<var>$station.item</var>
+			<text> </text>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>uses</text>
+			<text> </text>
+			<text>ware</text>
+			<text> </text>
+			<var>$ware</var>
+			<text> </text>
+			<text>as</text>
+			<text> </text>
+			<text>primary</text>
+			<text> </text>
+			<text>resource</text>
+		</line>
+		<line linenr="030" indent="&#160;&#160;&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<text>not</text>
+			<text> </text>
+			<var>$station.item</var>
+			<text> </text>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>uses</text>
+			<text> </text>
+			<text>ware</text>
+			<text> </text>
+			<var>$ware</var>
+			<text> </text>
+			<text>as</text>
+			<text> </text>
+			<text>secondary</text>
+			<text> </text>
+			<text>resource</text>
+		</line>
+		<line linenr="031" indent="&#160;&#160;&#160;&#160;&#160;" />
+		<line linenr="032" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$wares.count</var>
 			<text> </text>
 			<text>=</text>
@@ -290,7 +369,7 @@
 			<text> </text>
 			<text>bay</text>
 		</line>
-		<line linenr="028" indent="&#160;&#160;">
+		<line linenr="033" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$wares.count</var>
@@ -299,18 +378,18 @@
 			<text> </text>
 			<var>$amount.left</var>
 		</line>
-		<line linenr="029" indent="&#160;&#160;&#160;">
+		<line linenr="034" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$wares.count</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$amount.left</var>
 		</line>
-		<line linenr="030" indent="&#160;&#160;">
+		<line linenr="035" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="031" indent="&#160;&#160;" />
-		<line linenr="032" indent="&#160;&#160;">
+		<line linenr="036" indent="&#160;&#160;&#160;&#160;&#160;" />
+		<line linenr="037" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$amount.left</var>
 			<text> </text>
 			<text>=</text>
@@ -321,7 +400,7 @@
 			<text> </text>
 			<var>$wares.count</var>
 		</line>
-		<line linenr="033" indent="&#160;&#160;">
+		<line linenr="038" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$wares.count</var>
@@ -330,20 +409,20 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="034" indent="&#160;&#160;&#160;">
+		<line linenr="039" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$amount</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="035" indent="&#160;&#160;&#160;">
+		<line linenr="040" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>gosub</text>
 			<text> </text>
 			<var>create_freighter_drone</var>
 			<text>:</text>
 		</line>
-		<line linenr="036" indent="&#160;&#160;&#160;">
+		<line linenr="041" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$amount</var>
@@ -351,19 +430,17 @@
 			<text>==</text>
 			<text> </text>
 			<var>0</var>
-			<text> </text>
 		</line>
-		<line linenr="037" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="042" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>break</text>
 		</line>
-		<line linenr="038" indent="&#160;&#160;&#160;">
+		<line linenr="043" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="039" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="044" indent="&#160;&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[THIS]</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>call</text>
@@ -371,6 +448,7 @@
 			<text>script</text>
 			<text> </text>
 			<call>plugin.zanzal.defensivewait</call>
+			<text> </text>
 			<text>:</text>
 			<text> </text>
 			<text>from</text>
@@ -381,7 +459,7 @@
 			<text>=</text>
 			<var>1200</var>
 		</line>
-		<line linenr="040" indent="&#160;&#160;&#160;">
+		<line linenr="045" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$drone.count</var>
@@ -390,41 +468,51 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="041" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="046" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>gosub</text>
 			<text> </text>
 			<var>wait_for_drones</var>
 			<text>:</text>
 		</line>
-		<line linenr="042" indent="&#160;&#160;&#160;">
+		<line linenr="047" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="043" indent="&#160;&#160;">
+		<line linenr="048" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="044" indent="&#160;">
+		<line linenr="049" indent="&#160;&#160;&#160;&#160;&#160;" />
+		<line linenr="050" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="045" indent="&#160;">
+		<line linenr="051" indent="&#160;&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="052" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="053" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="054" indent="&#160;">
 			<text>inc</text>
 			<text> </text>
 			<var>$x</var>
 		</line>
-		<line linenr="046" indent="">
+		<line linenr="055" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="047" indent="" />
-		<line linenr="048" indent="">
+		<line linenr="056" indent="" />
+		<line linenr="057" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="049" indent="" />
-		<line linenr="050" indent="">
+		<line linenr="058" indent="" />
+		<line linenr="059" indent="">
 			<var>wait_for_drones</var>
 			<text>:</text>
 		</line>
-		<line linenr="051" indent="&#160;" interruptable="@">
+		<line linenr="060" indent="&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[THIS]</var>
@@ -442,7 +530,7 @@
 			<text>=</text>
 			<var>1</var>
 		</line>
-		<line linenr="052" indent="&#160;">
+		<line linenr="061" indent="&#160;">
 			<var>$drone.count</var>
 			<text> </text>
 			<text>=</text>
@@ -466,7 +554,7 @@
 			<text> </text>
 			<text>bay</text>
 		</line>
-		<line linenr="053" indent="&#160;">
+		<line linenr="062" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$drone.count</var>
@@ -475,23 +563,23 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="054" indent="&#160;&#160;">
+		<line linenr="063" indent="&#160;&#160;">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="055" indent="&#160;">
+		<line linenr="064" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="056" indent="">
+		<line linenr="065" indent="">
 			<text>endsub</text>
 		</line>
-		<line linenr="057" indent="" />
-		<line linenr="058" indent="">
+		<line linenr="066" indent="" />
+		<line linenr="067" indent="">
 			<var>create_freighter_drone</var>
 			<text>:</text>
 		</line>
-		<line linenr="059" indent="&#160;">
+		<line linenr="068" indent="&#160;">
 			<var>$ship.sector</var>
 			<text> </text>
 			<text>=</text>
@@ -503,7 +591,7 @@
 			<text> </text>
 			<text>sector</text>
 		</line>
-		<line linenr="060" indent="&#160;">
+		<line linenr="069" indent="&#160;">
 			<var>$ship.x</var>
 			<text> </text>
 			<text>=</text>
@@ -517,7 +605,7 @@
 			<text> </text>
 			<text>position</text>
 		</line>
-		<line linenr="061" indent="&#160;">
+		<line linenr="070" indent="&#160;">
 			<var>$ship.y</var>
 			<text> </text>
 			<text>=</text>
@@ -531,7 +619,7 @@
 			<text> </text>
 			<text>position</text>
 		</line>
-		<line linenr="062" indent="&#160;">
+		<line linenr="071" indent="&#160;">
 			<var>$ship.z</var>
 			<text> </text>
 			<text>=</text>
@@ -545,7 +633,7 @@
 			<text> </text>
 			<text>position</text>
 		</line>
-		<line linenr="063" indent="&#160;">
+		<line linenr="072" indent="&#160;">
 			<var>$ship.owner</var>
 			<text> </text>
 			<text>=</text>
@@ -559,7 +647,7 @@
 			<text> </text>
 			<text>race</text>
 		</line>
-		<line linenr="064" indent="&#160;">
+		<line linenr="073" indent="&#160;">
 			<text>=</text>
 			<text> </text>
 			<var>[THIS]</var>
@@ -575,7 +663,7 @@
 			<text> </text>
 			<var>{Freight Drone}</var>
 		</line>
-		<line linenr="065" indent="&#160;">
+		<line linenr="074" indent="&#160;">
 			<var>$ware.drone</var>
 			<text> </text>
 			<text>=</text>
@@ -609,7 +697,7 @@
 			<text>=</text>
 			<var>$ship.z</var>
 		</line>
-		<line linenr="066" indent="&#160;">
+		<line linenr="075" indent="&#160;">
 			<var>$ware.drone</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -621,7 +709,7 @@
 			<text> </text>
 			<var>$shopping.drone.text</var>
 		</line>
-		<line linenr="067" indent="&#160;">
+		<line linenr="076" indent="&#160;">
 			<var>$ware.drone</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -633,7 +721,7 @@
 			<text> </text>
 			<var>[THIS]</var>
 		</line>
-		<line linenr="068" indent="&#160;">
+		<line linenr="077" indent="&#160;">
 			<var>$amount</var>
 			<text> </text>
 			<text>=</text>
@@ -659,7 +747,7 @@
 			<text> </text>
 			<text>bay</text>
 		</line>
-		<line linenr="069" indent="&#160;">
+		<line linenr="078" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$amount</var>
@@ -668,17 +756,17 @@
 			<text> </text>
 			<var>$wares.count</var>
 		</line>
-		<line linenr="070" indent="&#160;&#160;">
+		<line linenr="079" indent="&#160;&#160;">
 			<var>$amount</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$wares.count</var>
 		</line>
-		<line linenr="071" indent="&#160;">
+		<line linenr="080" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="072" indent="&#160;">
+		<line linenr="081" indent="&#160;">
 			<var>$wares.count</var>
 			<text> </text>
 			<text>=</text>
@@ -689,7 +777,7 @@
 			<text> </text>
 			<var>$amount</var>
 		</line>
-		<line linenr="073" indent="&#160;">
+		<line linenr="082" indent="&#160;">
 			<var>$ware.drone</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -732,12 +820,12 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="074" indent="&#160;">
+		<line linenr="083" indent="&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$drone.count</var>
 		</line>
-		<line linenr="075" indent="">
+		<line linenr="084" indent="">
 			<text>endsub</text>
 		</line>
 	</sourcetext>
@@ -748,7 +836,7 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="21">
+			<sval type="array" size="22">
 				<sval type="string" val="ware" />
 				<sval type="string" val="quantity" />
 				<sval type="string" val="pageid" />
@@ -762,6 +850,7 @@
 				<sval type="string" val="amount.left" />
 				<sval type="string" val="station.item" />
 				<sval type="string" val="station.distance" />
+				<sval type="string" val="station.item.race" />
 				<sval type="string" val="wares.count" />
 				<sval type="string" val="amount" />
 				<sval type="string" val="ship.sector" />
@@ -771,7 +860,7 @@
 				<sval type="string" val="ship.owner" />
 				<sval type="string" val="ware.drone" />
 			</sval>
-			<sval type="array" size="54">
+			<sval type="array" size="58">
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
 					<sval type="int" val="2" />
@@ -864,7 +953,7 @@
 				</sval>
 				<sval type="array" size="25">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610605047" />
+					<sval type="int" val="-1610604023" />
 					<sval type="int" val="7" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="6" />
@@ -906,7 +995,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="31" />
+					<sval type="int" val="35" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="129" />
@@ -924,30 +1013,62 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="11" />
 				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="701" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="13" />
+				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="1454" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="-1610605565" />
+					<sval type="int" val="-1610604541" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="1455" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1610604541" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="635" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-536862716" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="636" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-536862716" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="618" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="11" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610608125" />
+					<sval type="int" val="-1610607101" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="10" />
 					<sval type="int" val="15" />
@@ -959,7 +1080,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="10" />
@@ -973,7 +1094,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="10" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="15" />
 					<sval type="int" val="12" />
 					<sval type="int" val="3" />
@@ -983,10 +1104,10 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610605559" />
+					<sval type="int" val="-1610604535" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="4" />
 					<sval type="int" val="0" />
 					<sval type="int" val="15" />
@@ -998,7 +1119,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="14" />
+					<sval type="int" val="15" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
 					<sval type="int" val="0" />
@@ -1007,14 +1128,14 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="37" />
+					<sval type="int" val="41" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610606589" />
+					<sval type="int" val="-1610605565" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="14" />
+					<sval type="int" val="15" />
 					<sval type="int" val="4" />
 					<sval type="int" val="0" />
 					<sval type="int" val="15" />
@@ -1026,7 +1147,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="28" />
+					<sval type="int" val="32" />
 				</sval>
 				<sval type="array" size="10">
 					<sval type="int" val="102" />
@@ -1042,7 +1163,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610605821" />
+					<sval type="int" val="-1610604797" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
@@ -1057,11 +1178,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="31" />
+					<sval type="int" val="35" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="19" />
+					<sval type="int" val="23" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="142" />
@@ -1100,7 +1221,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610603517" />
+					<sval type="int" val="-1610602493" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
@@ -1129,31 +1250,31 @@
 					<sval type="int" val="703" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="15" />
+					<sval type="int" val="16" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="740" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="16" />
+					<sval type="int" val="17" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="741" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="17" />
+					<sval type="int" val="18" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="742" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="18" />
+					<sval type="int" val="19" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="701" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="19" />
+					<sval type="int" val="20" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="646" />
@@ -1167,50 +1288,50 @@
 				</sval>
 				<sval type="array" size="14">
 					<sval type="int" val="739" />
-					<sval type="int" val="20" />
+					<sval type="int" val="21" />
 					<sval type="int" val="9" />
 					<sval type="int" val="459046" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="19" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="15" />
+					<sval type="int" val="20" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="16" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="17" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="18" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="19" />
 				</sval>
 				<sval type="array" size="5">
 					<sval type="int" val="1029" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="20" />
+					<sval type="int" val="21" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
 				</sval>
 				<sval type="array" size="5">
 					<sval type="int" val="713" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="20" />
+					<sval type="int" val="21" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="620" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="20" />
-					<sval type="int" val="14" />
+					<sval type="int" val="21" />
+					<sval type="int" val="15" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610599933" />
+					<sval type="int" val="-1610598909" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="14" />
+					<sval type="int" val="15" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="15" />
 					<sval type="int" val="2" />
 					<sval type="int" val="3" />
@@ -1220,21 +1341,21 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="14" />
+					<sval type="int" val="15" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="13" />
-					<sval type="int" val="131074" />
 					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
 					<sval type="int" val="15" />
 					<sval type="int" val="12" />
 					<sval type="int" val="3" />
@@ -1245,7 +1366,7 @@
 				<sval type="array" size="18">
 					<sval type="int" val="1017" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="20" />
+					<sval type="int" val="21" />
 					<sval type="string" val="plugin.zanzal.shopping.drone.buyware" />
 					<sval type="int" val="4" />
 					<sval type="int" val="0" />
@@ -1256,7 +1377,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="14" />
+					<sval type="int" val="15" />
 					<sval type="int" val="0" />
 					<sval type="int" val="0" />
 					<sval type="int" val="0" />
@@ -1280,7 +1401,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="24">
+			<sval type="array" size="29">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -1329,59 +1450,79 @@
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="14" />
+					<sval type="int" val="15" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="18" />
+					<sval type="int" val="19" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="22" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="18" />
+					<sval type="int" val="22" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="28" />
 					<sval type="int" val="7" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="27" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
 					<sval type="int" val="28" />
 					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="28" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="30" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="30" />
-					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="31" />
-					<sval type="int" val="2" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="36" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="37" />
+					<sval type="int" val="32" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="32" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="50" />
+					<sval type="int" val="32" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="32" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="32" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="32" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="35" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="40" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="41" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="54" />
 					<sval type="int" val="4" />
 				</sval>
 			</sval>
