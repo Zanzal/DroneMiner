@@ -1240,7 +1240,7 @@
 			<text> </text>
 			<text>sector</text>
 		</line>
-		<line linenr="147" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="147" indent="&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>[SECTOR]</var>
@@ -1249,7 +1249,7 @@
 			<text> </text>
 			<var>$player.sector</var>
 		</line>
-		<line linenr="148" indent="&#160;&#160;&#160;">
+		<line linenr="148" indent="&#160;&#160;">
 			<text>gosub</text>
 			<text> </text>
 			<var>force_break_roid</var>
@@ -1258,14 +1258,13 @@
 		<line linenr="149" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="150" indent="&#160;&#160;" />
-		<line linenr="151" indent="&#160;&#160;">
+		<line linenr="150" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="151" indent="&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
 		<line linenr="152" indent="&#160;&#160;&#160;">
-			<text>end</text>
-		</line>
-		<line linenr="153" indent="&#160;&#160;&#160;">
 			<var>$roids</var>
 			<text> </text>
 			<text>=</text>
@@ -1283,7 +1282,7 @@
 			<text> </text>
 			<text>sector</text>
 		</line>
-		<line linenr="154" indent="&#160;&#160;">
+		<line linenr="153" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<text>not</text>
@@ -1299,29 +1298,29 @@
 			<text> </text>
 			<var>$roids</var>
 		</line>
-		<line linenr="155" indent="&#160;">
+		<line linenr="154" indent="&#160;">
 			<var>$result</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="156" indent="&#160;">
+		<line linenr="155" indent="&#160;">
 			<text>break</text>
 		</line>
-		<line linenr="157" indent="&#160;">
+		<line linenr="156" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="158" indent="&#160;&#160;">
+		<line linenr="157" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="159" indent="&#160;" />
-		<line linenr="160" indent="&#160;">
+		<line linenr="158" indent="&#160;" />
+		<line linenr="159" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$reequip</var>
 		</line>
-		<line linenr="161" indent="">
+		<line linenr="160" indent="">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1343,10 +1342,10 @@
 			<text> </text>
 			<var>$reequip.ware</var>
 		</line>
-		<line linenr="162" indent="">
+		<line linenr="161" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="163" indent="">
+		<line linenr="162" indent="">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1358,15 +1357,15 @@
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="164" indent="&#160;">
+		<line linenr="163" indent="&#160;">
 			<text>endsub</text>
 		</line>
-		<line linenr="165" indent="&#160;&#160;" />
-		<line linenr="166" indent="&#160;&#160;">
+		<line linenr="164" indent="&#160;&#160;" />
+		<line linenr="165" indent="&#160;&#160;">
 			<var>force_break_roid</var>
 			<text>:</text>
 		</line>
-		<line linenr="167" indent="&#160;&#160;">
+		<line linenr="166" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$target.roid</var>
@@ -1374,7 +1373,7 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="168" indent="&#160;&#160;">
+		<line linenr="167" indent="&#160;&#160;">
 			<var>$yield</var>
 			<text> </text>
 			<text>=</text>
@@ -1388,14 +1387,14 @@
 			<text> </text>
 			<text>yield</text>
 		</line>
-		<line linenr="169" indent="&#160;&#160;">
+		<line linenr="168" indent="&#160;&#160;">
 			<var>$yield</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$yield</var>
 		</line>
-		<line linenr="170" indent="&#160;&#160;">
+		<line linenr="169" indent="&#160;&#160;">
 			<var>$ware</var>
 			<text> </text>
 			<text>=</text>
@@ -1413,24 +1412,7 @@
 			<text> </text>
 			<text>asteroid</text>
 		</line>
-		<line linenr="171" indent="&#160;&#160;">
-			<var>$subtype</var>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>random</text>
-			<text> </text>
-			<text>value</text>
-			<text> </text>
-			<text>between</text>
-			<text> </text>
-			<var>11</var>
-			<text> </text>
-			<text>and</text>
-			<text> </text>
-			<var>20</var>
-		</line>
-		<line linenr="172" indent="&#160;&#160;">
+		<line linenr="170" indent="&#160;&#160;">
 			<var>$x</var>
 			<text> </text>
 			<text>=</text>
@@ -1444,7 +1426,7 @@
 			<text> </text>
 			<text>position</text>
 		</line>
-		<line linenr="173" indent="&#160;&#160;">
+		<line linenr="171" indent="&#160;&#160;">
 			<var>$y</var>
 			<text> </text>
 			<text>=</text>
@@ -1458,7 +1440,7 @@
 			<text> </text>
 			<text>position</text>
 		</line>
-		<line linenr="174" indent="&#160;&#160;">
+		<line linenr="172" indent="&#160;&#160;">
 			<var>$z</var>
 			<text> </text>
 			<text>=</text>
@@ -1472,9 +1454,8 @@
 			<text> </text>
 			<text>position</text>
 		</line>
-		<line linenr="175" indent="&#160;&#160;">
+		<line linenr="173" indent="&#160;&#160;">
 			<var>$target.roid</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>disable</text>
@@ -1483,9 +1464,8 @@
 			<text> </text>
 			<text>rebuild</text>
 		</line>
-		<line linenr="176" indent="&#160;">
+		<line linenr="174" indent="&#160;">
 			<var>$target.roid</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>destruct</text>
@@ -1499,7 +1479,7 @@
 			<text>=</text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="177" indent="">
+		<line linenr="175" indent="">
 			<var>$debris</var>
 			<text> </text>
 			<text>=</text>
@@ -1537,9 +1517,8 @@
 			<text>=</text>
 			<var>$z</var>
 		</line>
-		<line linenr="178" indent="">
+		<line linenr="176" indent="">
 			<var>$debris</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>disable</text>
@@ -1548,10 +1527,10 @@
 			<text> </text>
 			<text>rebuild</text>
 		</line>
-		<line linenr="179" indent="">
+		<line linenr="177" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="180" indent="">
+		<line linenr="178" indent="">
 			<text>endsub</text>
 		</line>
 	</sourcetext>
@@ -1562,7 +1541,7 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="40">
+			<sval type="array" size="39">
 				<sval type="string" val="pageid" />
 				<sval type="string" val="result" />
 				<sval type="string" val="vars" />
@@ -1598,13 +1577,12 @@
 				<sval type="string" val="player.sector" />
 				<sval type="string" val="roids" />
 				<sval type="string" val="ware" />
-				<sval type="string" val="subtype" />
 				<sval type="string" val="x" />
 				<sval type="string" val="y" />
 				<sval type="string" val="z" />
 				<sval type="string" val="debris" />
 			</sval>
-			<sval type="array" size="134">
+			<sval type="array" size="133">
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
 					<sval type="int" val="0" />
@@ -2677,7 +2655,7 @@
 					<sval type="int" val="706" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
-					<sval type="int" val="-1610578685" />
+					<sval type="int" val="-1610578941" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="1179" />
@@ -2700,31 +2678,23 @@
 					<sval type="int" val="8" />
 					<sval type="int" val="34" />
 				</sval>
-				<sval type="array" size="6">
-					<sval type="int" val="110" />
-					<sval type="int" val="35" />
-					<sval type="int" val="4" />
-					<sval type="int" val="11" />
-					<sval type="int" val="4" />
-					<sval type="int" val="21" />
-				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="740" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
-					<sval type="int" val="36" />
+					<sval type="int" val="35" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="741" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
-					<sval type="int" val="37" />
+					<sval type="int" val="36" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="742" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
-					<sval type="int" val="38" />
+					<sval type="int" val="37" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="1096" />
@@ -2740,7 +2710,7 @@
 				</sval>
 				<sval type="array" size="16">
 					<sval type="int" val="799" />
-					<sval type="int" val="39" />
+					<sval type="int" val="38" />
 					<sval type="int" val="0" />
 					<sval type="int" val="0" />
 					<sval type="int" val="131075" />
@@ -2750,23 +2720,23 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="26" />
 					<sval type="int" val="131074" />
+					<sval type="int" val="35" />
+					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="37" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="38" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="1096" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="39" />
+					<sval type="int" val="38" />
 				</sval>
 				<sval type="array" size="1">
 					<sval type="int" val="1168" />
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="55">
+			<sval type="array" size="54">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -2956,10 +2926,6 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="111" />
-					<sval type="int" val="2" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="111" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
@@ -2991,7 +2957,7 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="133" />
+					<sval type="int" val="132" />
 					<sval type="int" val="4" />
 				</sval>
 			</sval>
