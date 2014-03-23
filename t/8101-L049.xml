@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Generated using X-Studio -->
+<language id="44">
+
+	<page id="2008" title="" desc="" voice="no">
+		<t id="421">COMMAND_DRONEMINER_TRADER</t>
+	</page>
+
+	<page id="2010" title="" desc="" voice="no">
+		<t id="421">\33ODrone Mine and Trade\33X</t>
+	</page>
+
+	<page id="2011" title="" desc="" voice="no">
+		<t id="421">D.Mine</t>
+	</page>
+
+	<page id="2022" title="" desc="" voice="no">
+		<t id="421">A fully automated drone-based mining and trading system for any XL sized with a docking bay.</t>
+	</page>
+
+	<page id="8101" title="Drone Mining System" desc="" voice="no">
+		<t id="1">Drone Mining System v1.1</t>
+		<t id="2">The drone mining, trading, and collection system is an open source software program that uses existing tools and equipment to turn a TL or other large carrier into a fully automated drone mining and trading system.</t>
+		<t id="3">\33R%s\33X(Red text)</t>
+		<t id="4">\33Y%s\33W / \33G%s\33X</t>
+		<t id="5">Required Upgrades Missing</t>
+		<t id="6">Cancel</t>
+		<t id="7">Commands</t>
+		<t id="8">Required Shopping</t>
+		<t id="9">Detailed Statistics</t>
+		<t id="10">Mineral Count</t>
+		<t id="11">No minerals left, and asteroid busting failed.</t>
+		<t id="12">Optional Shopping</t>
+		<t id="13">Parameters</t>
+		<t id="14">Statistics</t>
+		<t id="15">\33O%s\33X(Orange text)</t>
+		<t id="16">\33Y%s\33X(Yellow Text)</t>
+		<t id="17">\33RNot installed\33X</t>
+		<t id="18">\33YAnticipated Costs\33X</t>
+		<t id="19">Bust Asteroids:</t>
+		<t id="20">\33G%s\33X(Green text)</t>
+		<t id="21">Mining Sector:</t>
+		<t id="22">Shopping For</t>
+		<t id="23">Save Settings and Close</t>
+		<t id="24">Stop Mining and Recall Drones</t>
+		<t id="25">Drone Mining / Trading operation completed.\n\nCompletion Code: %s</t>
+		<t id="26">Mine and Trade Minerals</t>
+		<t id="27">Collect and Wait For Further Instructions</t>
+		<t id="28">Collect and Dump at Home Base</t>
+		<t id="29">Stop After This Run</t>
+		<t id="30">Net Profit</t>
+		<t id="31">Mineral Value</t>
+		<t id="32">Expenses</t>
+		<t id="33">\33W%s\33X(White text)</t>
+		<t id="34">Defend With Missiles</t>
+		<t id="35">Advanced Settings</t>
+		<t id="36">Keep Ore Stocked At</t>
+		<t id="37">Keep Silicon Stocked At</t>
+		<t id="38">Keep Nividium Stocked At</t>
+		<t id="39">Keep Ice Stocked At</t>
+		<t id="40">Net Value</t>
+		<t id="41">Ship Value</t>
+		<t id="42">Total Sales</t>
+		<t id="43">No minerals of the kind\(s\) specified left to collect.</t>
+		<t id="44">DMS: Not enough remaining space in Cargo hold</t>
+		<t id="45">Out of drones.</t>
+		<t id="46">DMS: Recalling drones</t>
+		<t id="47">DMS: Trouble approaching</t>
+		<t id="48">Freight Drone Max Purchase</t>
+		<t id="49">Fighter Drone Mk2 Max Purchase</t>
+		<t id="50">Shopping Drone</t>
+		<t id="51">Trading Drone</t>
+		<t id="52">Mining Collection Drone</t>
+		<t id="53">Mining Cutting Drone</t>
+		<t id="54">Shopping unsuccessful.</t>
+	</page>
+</language>
