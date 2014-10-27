@@ -67,11 +67,12 @@
 		<t id="46">DMS: Recalling drones</t>
 		<t id="47">DMS: Trouble approaching</t>
 		<t id="48">Freight Drone Max Purchase</t>
-		<t id="49">Fighter Drone Mk2 Max Purchase</t>
+		<t id="49">Fighter / Keris Max Purchase</t>
 		<t id="50">Shopping Drone</t>
 		<t id="51">Trading Drone</t>
 		<t id="52">Mining Collection Drone</t>
 		<t id="53">Mining Cutting Drone</t>
 		<t id="54">Shopping unsuccessful.</t>
+		<t id="55">Ware Collection Drone</t>
 	</page>
 </language>

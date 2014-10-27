@@ -66,7 +66,6 @@
 			<text>=</text>
 			<text> </text>
 			<var>[THIS]</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>get</text>
@@ -272,26 +271,28 @@
 			<text> </text>
 			<var>$min.fuel</var>
 		</line>
-		<line linenr="034" indent="&#160;">
+		<line linenr="034" indent="&#160;" interruptable="@">
 			<var>$dynamic.blacklist</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>array</text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text>call</text>
 			<text> </text>
-			<text>alloc</text>
+			<text>script</text>
+			<text> </text>
+			<call>plugin.zanzal.initblacklist</call>
 			<text>:</text>
 			<text> </text>
-			<text>size</text>
-			<text>=</text>
-			<var>0</var>
 		</line>
-		<line linenr="035" indent="&#160;">
+		<line linenr="035" indent="&#160;" />
+		<line linenr="036" indent="&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="036" indent="&#160;&#160;">
+		<line linenr="037" indent="&#160;&#160;">
 			<var>$from.station</var>
 			<text> </text>
 			<text>=</text>
@@ -344,14 +345,14 @@
 			<text>=</text>
 			<var>$dynamic.blacklist</var>
 		</line>
-		<line linenr="037" indent="&#160;&#160;">
+		<line linenr="038" indent="&#160;&#160;">
 			<var>$use.proxy</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>[FALSE]</var>
 		</line>
-		<line linenr="038" indent="&#160;&#160;">
+		<line linenr="039" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<text>not</text>
@@ -361,10 +362,10 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="039" indent="&#160;&#160;&#160;">
+		<line linenr="040" indent="&#160;&#160;&#160;">
 			<comment>* Can't find a dock</comment>
 		</line>
-		<line linenr="040" indent="&#160;&#160;&#160;">
+		<line linenr="041" indent="&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<text>(</text>
@@ -375,10 +376,10 @@
 			<var>$huge</var>
 			<text>)</text>
 		</line>
-		<line linenr="041" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="042" indent="&#160;&#160;&#160;&#160;">
 			<comment>* Big or huge ships can't dock at factories so lets try a proxy</comment>
 		</line>
-		<line linenr="042" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="043" indent="&#160;&#160;&#160;&#160;">
 			<var>$freight.drones</var>
 			<text> </text>
 			<text>=</text>
@@ -402,7 +403,7 @@
 			<text> </text>
 			<text>bay</text>
 		</line>
-		<line linenr="043" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="044" indent="&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$freight.drones</var>
@@ -411,7 +412,7 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="044" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="045" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$my.owner</var>
 			<text> </text>
 			<text>=</text>
@@ -425,7 +426,7 @@
 			<text> </text>
 			<text>race</text>
 		</line>
-		<line linenr="045" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="046" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$proxy</var>
 			<text> </text>
 			<text>=</text>
@@ -459,7 +460,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="046" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="047" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$proxy</var>
@@ -467,7 +468,7 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="047" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="048" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$from.station</var>
 			<text> </text>
 			<text>=</text>
@@ -519,8 +520,8 @@
 			<text>=</text>
 			<var>$dynamic.blacklist</var>
 		</line>
-		<line linenr="048" indent="&#160;&#160;&#160;&#160;&#160;&#160;" />
-		<line linenr="049" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="049" indent="&#160;&#160;&#160;&#160;&#160;&#160;" />
+		<line linenr="050" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>skip</text>
 			<text> </text>
 			<text>if</text>
@@ -530,11 +531,11 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="050" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="051" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>break</text>
 		</line>
-		<line linenr="051" indent="&#160;&#160;&#160;&#160;&#160;&#160;" />
-		<line linenr="052" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="052" indent="&#160;&#160;&#160;&#160;&#160;&#160;" />
+		<line linenr="053" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$subtype</var>
 			<text> </text>
 			<text>=</text>
@@ -546,7 +547,7 @@
 			<text> </text>
 			<text>subtype</text>
 		</line>
-		<line linenr="053" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="054" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<text>not</text>
@@ -575,7 +576,7 @@
 			<text> </text>
 			<var>$subtype</var>
 		</line>
-		<line linenr="054" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="055" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>append</text>
 			<text> </text>
 			<var>$from.station</var>
@@ -586,18 +587,18 @@
 			<text> </text>
 			<var>$dynamic.blacklist</var>
 		</line>
-		<line linenr="055" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="056" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$from.station</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="056" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="057" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="057" indent="&#160;&#160;&#160;&#160;&#160;&#160;" />
-		<line linenr="058" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="058" indent="&#160;&#160;&#160;&#160;&#160;&#160;" />
+		<line linenr="059" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$proxy</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -612,7 +613,7 @@
 			<text>=</text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="059" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="060" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$from.station</var>
@@ -620,39 +621,39 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="060" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="061" indent="&#160;&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$use.proxy</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="061" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="062" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="062" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="063" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="063" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="064" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$from.station</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="064" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="065" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="065" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="066" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="066" indent="&#160;&#160;&#160;">
+		<line linenr="067" indent="&#160;&#160;&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="067" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="068" indent="&#160;&#160;&#160;&#160;">
 			<comment>* We're not big or huge so lets find a factory we can buy from</comment>
 		</line>
-		<line linenr="068" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="069" indent="&#160;&#160;&#160;&#160;">
 			<var>$from.station</var>
 			<text> </text>
 			<text>=</text>
@@ -704,92 +705,15 @@
 			<text>=</text>
 			<var>$dynamic.blacklist</var>
 		</line>
-		<line linenr="069" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="070" indent="&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$from.station</var>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>exists</text>
-		</line>
-		<line linenr="070" indent="&#160;&#160;&#160;&#160;&#160;">
-			<var>$subtype</var>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<var>[THIS]</var>
-			<text>-&gt;</text>
-			<text> </text>
-			<text>get</text>
-			<text> </text>
-			<text>subtype</text>
 		</line>
 		<line linenr="071" indent="&#160;&#160;&#160;&#160;&#160;">
-			<text>if</text>
-			<text> </text>
-			<text>not</text>
-			<text> </text>
-			<var>$from.station</var>
-			<text>-&gt;</text>
-			<text> </text>
-			<text>has</text>
-			<text> </text>
-			<text>a</text>
-			<text> </text>
-			<text>free</text>
-			<text> </text>
-			<text>ship</text>
-			<text> </text>
-			<text>dock</text>
-			<text> </text>
-			<text>port</text>
-			<text>:</text>
-			<text> </text>
-			<text>ship</text>
-			<text> </text>
-			<text>subtype</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<var>$subtype</var>
-		</line>
-		<line linenr="072" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
-			<text>append</text>
-			<text> </text>
-			<var>$from.station</var>
-			<text> </text>
-			<text>to</text>
-			<text> </text>
-			<text>array</text>
-			<text> </text>
-			<var>$dynamic.blacklist</var>
-		</line>
-		<line linenr="073" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
-			<var>$from.station</var>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<var>null</var>
-		</line>
-		<line linenr="074" indent="&#160;&#160;&#160;&#160;&#160;">
-			<text>end</text>
-		</line>
-		<line linenr="075" indent="&#160;&#160;&#160;&#160;">
-			<text>else</text>
-		</line>
-		<line linenr="076" indent="&#160;&#160;&#160;&#160;&#160;">
-			<text>break</text>
-		</line>
-		<line linenr="077" indent="&#160;&#160;&#160;&#160;">
-			<text>end</text>
-		</line>
-		<line linenr="078" indent="&#160;&#160;&#160;">
-			<text>end</text>
-		</line>
-		<line linenr="079" indent="&#160;&#160;">
-			<text>else</text>
-		</line>
-		<line linenr="080" indent="&#160;&#160;&#160;">
 			<var>$subtype</var>
 			<text> </text>
 			<text>=</text>
@@ -801,7 +725,7 @@
 			<text> </text>
 			<text>subtype</text>
 		</line>
-		<line linenr="081" indent="&#160;&#160;&#160;">
+		<line linenr="072" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<text>not</text>
@@ -830,7 +754,7 @@
 			<text> </text>
 			<var>$subtype</var>
 		</line>
-		<line linenr="082" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="073" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>append</text>
 			<text> </text>
 			<var>$from.station</var>
@@ -841,21 +765,98 @@
 			<text> </text>
 			<var>$dynamic.blacklist</var>
 		</line>
-		<line linenr="083" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="074" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$from.station</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="084" indent="&#160;&#160;&#160;">
+		<line linenr="075" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="085" indent="&#160;&#160;">
+		<line linenr="076" indent="&#160;&#160;&#160;&#160;">
+			<text>else</text>
+		</line>
+		<line linenr="077" indent="&#160;&#160;&#160;&#160;&#160;">
+			<text>break</text>
+		</line>
+		<line linenr="078" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="086" indent="&#160;&#160;" />
-		<line linenr="087" indent="&#160;&#160;">
+		<line linenr="079" indent="&#160;&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="080" indent="&#160;&#160;">
+			<text>else</text>
+		</line>
+		<line linenr="081" indent="&#160;&#160;&#160;">
+			<var>$subtype</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>subtype</text>
+		</line>
+		<line linenr="082" indent="&#160;&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<text>not</text>
+			<text> </text>
+			<var>$from.station</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>has</text>
+			<text> </text>
+			<text>a</text>
+			<text> </text>
+			<text>free</text>
+			<text> </text>
+			<text>ship</text>
+			<text> </text>
+			<text>dock</text>
+			<text> </text>
+			<text>port</text>
+			<text>:</text>
+			<text> </text>
+			<text>ship</text>
+			<text> </text>
+			<text>subtype</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$subtype</var>
+		</line>
+		<line linenr="083" indent="&#160;&#160;&#160;&#160;">
+			<text>append</text>
+			<text> </text>
+			<var>$from.station</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$dynamic.blacklist</var>
+		</line>
+		<line linenr="084" indent="&#160;&#160;&#160;&#160;">
+			<var>$from.station</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="085" indent="&#160;&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="086" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="087" indent="&#160;&#160;" />
+		<line linenr="088" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$from.station</var>
@@ -863,10 +864,10 @@
 			<text> </text>
 			<text>exists</text>
 		</line>
-		<line linenr="088" indent="&#160;&#160;&#160;">
+		<line linenr="089" indent="&#160;&#160;&#160;">
 			<comment>* Purchase wares</comment>
 		</line>
-		<line linenr="089" indent="&#160;&#160;&#160;">
+		<line linenr="090" indent="&#160;&#160;&#160;">
 			<var>$ecells.quantity</var>
 			<text> </text>
 			<text>=</text>
@@ -877,7 +878,7 @@
 			<text> </text>
 			<var>$ecells</var>
 		</line>
-		<line linenr="090" indent="&#160;&#160;&#160;">
+		<line linenr="091" indent="&#160;&#160;&#160;">
 			<var>$ecell.item</var>
 			<text> </text>
 			<text>=</text>
@@ -891,7 +892,7 @@
 			<text>=</text>
 			<var>2</var>
 		</line>
-		<line linenr="091" indent="&#160;&#160;&#160;">
+		<line linenr="092" indent="&#160;&#160;&#160;">
 			<var>$ecell.item</var>
 			<text>[</text>
 			<var>0</var>
@@ -901,7 +902,7 @@
 			<text> </text>
 			<var>$max.fuel</var>
 		</line>
-		<line linenr="092" indent="&#160;&#160;&#160;">
+		<line linenr="093" indent="&#160;&#160;&#160;">
 			<var>$ecell.item</var>
 			<text>[</text>
 			<var>1</var>
@@ -911,7 +912,7 @@
 			<text> </text>
 			<var>{Energy Cells}</var>
 		</line>
-		<line linenr="093" indent="&#160;&#160;&#160;">
+		<line linenr="094" indent="&#160;&#160;&#160;">
 			<var>$full.list</var>
 			<text> </text>
 			<text>=</text>
@@ -925,7 +926,7 @@
 			<text>=</text>
 			<var>1</var>
 		</line>
-		<line linenr="094" indent="&#160;&#160;&#160;">
+		<line linenr="095" indent="&#160;&#160;&#160;">
 			<var>$full.list</var>
 			<text>[</text>
 			<var>0</var>
@@ -935,7 +936,7 @@
 			<text> </text>
 			<var>$ecell.item</var>
 		</line>
-		<line linenr="095" indent="&#160;&#160;&#160;">
+		<line linenr="096" indent="&#160;&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -947,7 +948,7 @@
 			<text> </text>
 			<var>$from.station</var>
 		</line>
-		<line linenr="096" indent="&#160;&#160;&#160;">
+		<line linenr="097" indent="&#160;&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -958,7 +959,7 @@
 			<text> </text>
 			<var>[COMMAND_GET_WARE]</var>
 		</line>
-		<line linenr="097" indent="&#160;&#160;&#160;">
+		<line linenr="098" indent="&#160;&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -972,7 +973,7 @@
 			<text> </text>
 			<var>{Energy Cells}</var>
 		</line>
-		<line linenr="098" indent="&#160;&#160;&#160;">
+		<line linenr="099" indent="&#160;&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -988,7 +989,7 @@
 			<text> </text>
 			<var>$ecells.quantity</var>
 		</line>
-		<line linenr="099" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="100" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[THIS]</var>
@@ -1014,7 +1015,7 @@
 			<text>=</text>
 			<var>$use.proxy</var>
 		</line>
-		<line linenr="100" indent="&#160;&#160;">
+		<line linenr="101" indent="&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1026,7 +1027,7 @@
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="101" indent="&#160;&#160;&#160;">
+		<line linenr="102" indent="&#160;&#160;&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1040,13 +1041,13 @@
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="102" indent="&#160;&#160;">
+		<line linenr="103" indent="&#160;&#160;">
 			<text>break</text>
 		</line>
-		<line linenr="103" indent="&#160;">
+		<line linenr="104" indent="&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="104" indent="" interruptable="@">
+		<line linenr="105" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1063,17 +1064,17 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="105" indent="">
-			<text>end</text>
-		</line>
 		<line linenr="106" indent="">
 			<text>end</text>
 		</line>
 		<line linenr="107" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="108" indent="" />
-		<line linenr="109" indent="">
+		<line linenr="108" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="109" indent="" />
+		<line linenr="110" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
@@ -1300,10 +1301,12 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="-2" />
 				</sval>
-				<sval type="array" size="4">
-					<sval type="int" val="128" />
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="plugin.zanzal.initblacklist" />
 					<sval type="int" val="10" />
-					<sval type="int" val="4" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
 					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="7">
@@ -1761,7 +1764,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="45">
+			<sval type="array" size="46">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -1831,6 +1834,10 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="16" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="18" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
