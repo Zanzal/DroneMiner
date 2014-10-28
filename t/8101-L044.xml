@@ -19,7 +19,7 @@
 	</page>
 
 	<page id="8101" title="Drone Mining System" desc="" voice="no">
-		<t id="1">Drone Mining System v1.1</t>
+		<t id="1">Drone Mining System v1.2</t>
 		<t id="2">The drone mining, trading, and collection system is an open source software program that uses existing tools and equipment to turn a TL or other large carrier into a fully automated drone mining and trading system.</t>
 		<t id="3">\33R%s\33X(Red text)</t>
 		<t id="4">\33Y%s\33W / \33G%s\33X</t>
