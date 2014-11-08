@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>plugin.zanzal.droneminer.mine</name>
-	<version>5</version>
+	<version>6</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments />
@@ -4625,7 +4625,7 @@
 			<sval type="string" val="plugin.zanzal.droneminer.mine" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="5" />
+			<sval type="int" val="6" />
 			<sval type="int" val="0" />
 			<sval type="array" size="122">
 				<sval type="string" val="pageid" />
